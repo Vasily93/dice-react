@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import Die from './Die';
 
 class RollDice extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {
             die1: 'four',
             die2: 'four',
@@ -12,7 +12,7 @@ class RollDice extends Component {
     }
     roll = () => {
         const rand = () => {
-            return Math.floor(Math.random() * this.props.max)
+            return Math.floor(Math.random() * 6)
         }
         this.setState({
             die1: this.state.numArr[rand()],
@@ -26,7 +26,7 @@ class RollDice extends Component {
                 <Die num={this.state.die1}/>
                 <Die num={this.state.die2}/>
                 <p>
-                    <button onClick={this.roll}>Roll Dice!</button>
+                      <button onClick={this.roll}>Roll Dice!</button>
                 </p>
             </div>
         )

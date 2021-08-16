@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <h1>Dice App</h1>
-      <RollDice max={6}/>
+      <RollDice/>
     </div>
   );
 }
